@@ -108,3 +108,22 @@ Response/Action:
 
 "Hello! I'm a rule-based IT assistant. I can help with common issues like password resets, network problems, and software troubleshooting. What seems to be the problem today?"
 
+## Part 3: Rules/Logic for the Chosen System
+
+Sammple input and outputf:
+
+Welcome to the IT Help Desk Chatbot!
+You can ask me about password issues, network problems, and more.
+
+You: my screen is black
+Vhatbot: Please restart your device. If the problem persists, please provide the model number of the hardware you are having issues with.
+
+You: I need Daniel from IT
+Chatbot: Technician Daniel Vincent's extension is 4459.
+
+You: my printer isn't working
+Chatbot: I can help with common printer problems. Are you getting an error message? Or is the printer not responding?
+
+## Part 4: Reflcection
+
+My rule-based system is a very basic chatbot using if-then statements based on the user's input. It is designed to respond with helpful information, additional questions, and contact numbers for the IT team in case of emergencies. When the user's input contains certain keywords, it will respond with predetermined statements for the user to read. Some of the issues it responds to inlove password and account issues, network connectivity issues, printer and hardware issues, software/applications problems, and IT contact information. I also inclided some general greetings to Follow up question functionality is not currently present but I imagine it would be as easy as a nest if-then state. This system shows the limitation of a rule-based chatbot as it can only imitate a human response in a narrow capacity. Some challenges I noticed when using an LLM to help brainstorm project ideas were duplications in the list of ideas. The duplications were not one-to-one but it some projects were so close in nature they could be built into one system. During the coding process, I only needed to refine the responses and keywords for my particular use. For example, I included our actual extensions and a suggestion to use the SSPR system we have implented at my company. I also tuned the keywords to include words users are more likely to use such as 'screen' vs 'monitor.' Believe it or not, I have users that have never heard the word 'monitor' before. During this assignement I ran into minimal issues. I have, however, run into some halucination and continuity issues in previous priojects that were more complex.
