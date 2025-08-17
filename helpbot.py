@@ -1,10 +1,10 @@
 rules = {
     # Intent 1: Password & Account Issues
-    "password": "I can help with password issues. Do you need to reset your password or unlock your account?",
-    "login": "I can help with password issues. Do you need to reset your password or unlock your account?",
-    "locked": "I can help with password issues. Do you need to reset your password or unlock your account?",
-    "account": "I can help with password issues. Do you need to reset your password or unlock your account?",
-    "reset": "I can help with password issues. Do you need to reset your password or unlock your account?",
+    "password": "Please use the 'Reset my Password' below the password field to reset your own password.",
+    "login": "Please use the 'Reset my Password' below the password field to reset your own password.",
+    "locked": "Please use the 'Reset my Password' below the password field to reset your own password.",
+    "account": "Please use the 'Reset my Password' below the password field to reset your own password.",
+    "reset": "Please use the 'Reset my Password' below the password field to reset your own password.",
 
     # Intent 2: Network Connectivity Problems
     "internet": "Okay, let's troubleshoot your network. Can you tell me if this is affecting a specific website or all of your internet access?",
@@ -17,7 +17,7 @@ rules = {
     "print": "I can help with common printer problems. Are you getting an error message? Or is the printer not responding?",
     "scanner": "I can help with common printer problems. Are you getting an error message? Or is the printer not responding?",
     "computer": "Please restart your device. If the problem persists, please provide the model number of the hardware you are having issues with.",
-    "monitor": "Please restart your device. If the problem persists, please provide the model number of the hardware you are having issues with.",
+    "screen": "Please restart your device. If the problem persists, please provide the model number of the hardware you are having issues with.",
 
     # Intent 4: Software/Application Problems
     "software": "What software are you having trouble with? Can you please describe the issue in a few more words?",
@@ -27,7 +27,14 @@ rules = {
     # Intent 5: General Help and Greeting
     "help": "Hello! I'm a rule-based IT assistant. I can help with common issues like password resets, network problems, and software troubleshooting. What seems to be the problem today?",
     "hello": "Hello! I'm a rule-based IT assistant. I can help with common issues like password resets, network problems, and software troubleshooting. What seems to be the problem today?",
-    "hi": "Hello! I'm a rule-based IT assistant. I can help with common issues like password resets, network problems, and software troubleshooting. What seems to be the problem today?"
+    "hi": "Hello! I'm a rule-based IT assistant. I can help with common issues like password resets, network problems, and software troubleshooting. What seems to be the problem today?",
+
+    # Intent 6: IT Contact Info
+    "technician": "Please contact the IT Helpdesk as extension 4455.",
+    "person": "Please contact the IT Helpdesk as extension 4455.",
+    "human":"Please contact the IT Helpdesk as extension 4455.",
+    "daniel": "Technician Daniel Vincent's extension is 4459.",
+    "emergency": "Please contact the IT emergancy cell-phone at 225-867-5309."
 }
 
 def chat_bot_response(user_input):
@@ -55,11 +62,20 @@ def chat_bot_response(user_input):
     elif "printer" in user_input or "print" in user_input or "scanner" in user_input:
         return rules["printer"]
         
-    elif "computer" in user_input or "monitor" in user_input:
+    elif "computer" in user_input or "screen" in user_input:
         return rules["computer"]
         
     elif "software" in user_input or "app" in user_input or "program" in user_input:
         return rules["software"]
+    
+    elif "technician" in user_input or "person" in user_input or "human" in user_input:
+        return rules["technician"]
+    
+    elif "daniel" in user_input:
+        return rules["daniel"]
+    
+    elif "emergancy" in user_input:
+        return rules["emergancy"]
 
     # This is a fallback for general greetings. This comes last
     # so more specific rules are prioritized.
