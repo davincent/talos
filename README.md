@@ -110,7 +110,7 @@ Response/Action:
 
 ## Part 3: Rules/Logic for the Chosen System
 
-Sammple input and outputf:
+Sammple input and output:
 
 Welcome to the IT Help Desk Chatbot!
 You can ask me about password issues, network problems, and more.
